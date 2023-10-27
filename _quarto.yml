@@ -1,0 +1,97 @@
+project:
+  type: website
+
+
+website:
+  repo-url: https://github.com/quarto-dev/quarto-demo
+  repo-actions: [edit, issue]
+  description: "A great sample blog"
+  back-to-top-navigation: true
+  page-navigation: true
+  reader-mode: true
+  navbar:
+    background: primary
+    search: true
+    left: 
+      - text: "Home"
+        file: index.qmd
+      - text: "Talks"
+        file: talks.qmd
+      - text: "Tutorials"
+        file: tutorials.qmd
+      - text: "How-To"
+        file: howto.qmd
+      - text: "Fundamentals"
+        file: fundamentals.qmd
+      - text: "blog"
+        file: blog.qmd
+      - text: "About"
+        file: about.qmd
+        
+        
+        
+        
+      - text: "Help"
+        menu: 
+          - text: "1"
+          - text: "2"
+    right: 
+      - icon: rss
+        href: index.xml
+    tools:
+      - icon: facebook
+        href: https//facebook.com
+      - icon: twitter
+        href: https://twitter.com
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://code.com
+          - text: Report a Bug
+            url:  https://bugs.com
+  sidebar:
+    - title: "Tutorials"
+      style: "docked"
+      background: light
+      contents:
+        - section: tutorials.qmd
+          contents: 
+            - href: tutorial_1.qmd
+            - href: tutorial_2.qmd
+        - text: "---"
+        - section: "Second Section"
+          contents: 
+           - href: tutorial_1.qmd
+           - href: tutorial_2.qmd
+        
+    - title: "How-To"
+      contents:
+           - howto.qmd
+            # navigation items
+    - title: "Fundamentals"
+      contents:
+        - fundamentals.qmd
+          # navigation items
+    - title: "blog"
+      contents:
+        - blog.qmd
+           # navigation items
+  page-footer: 
+    left: "Copyright 2021, Norah Jones" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/      
+        
+        
+
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+editor: visual
+
